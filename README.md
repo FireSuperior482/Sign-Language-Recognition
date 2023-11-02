@@ -128,8 +128,8 @@ We have to create a window to take the input from our webcam. The image which we
 To create the window
 
 
-def main():
-    while True:  
+    def main():
+        while True:  
 
        # capturing the image from webcam 
        cam_capture = cv2.VideoCapture(0)
@@ -157,11 +157,14 @@ Now we have to predict the alphabet from the input image. Our model will give ou
 
 
 #model is our classifier and image is input image we are passing
-def keras_predict(model, image):
-    data = np.asarray( image, dtype="int32" )
-    pred_probab = model.predict(data)[0]
+ 
     
-    # softmax gives probability for all the alphabets hence we have to choose the maximum probability alphabet 
+    def keras_predict(model, image):
+        data = np.asarray( image, dtype="int32" )
+        pred_probab = model.predict(data)[0]
+    
+    # softmax gives probability for all the alphabets hence we have to choose the maximum probability alphabet
+    
     pred_class = list(pred_probab).index(max(pred_probab))
     return max(pred_probab), pred_class
 Our model’s accuracy is 94% so it should recognise alphabets without any problem with plain background and descent lights.

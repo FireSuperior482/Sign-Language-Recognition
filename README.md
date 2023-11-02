@@ -19,8 +19,8 @@ Pytorch Implementation is given in sign_language_pytorch.ipynb
 
 <h1>Sign Language Recognition Using CNN and OpenCV<h1>
 
-<p>To build a SLR (Sign Language Recognition) we will need three things:
-</p>
+<h5>To build a SLR (Sign Language Recognition) we will need three things:
+</h5>
 
 <h3>1)Dataset</h3>
 <h3>2)Model (In this case we will use a CNN)</h3>
@@ -41,7 +41,7 @@ Loading the dataset to colab
 To load the dataset into colab use this code:
 
 
-
+#import keras
 from keras.datasets import mnist
 (X_train, Y_train) , (X_test , Y_test) = mnist.load_data()
 Our dataset is in CSV(Comma-separated values) format. train_X and test_X contain the values of each pixel. train_Y and test_Y contain the label of image. You can use the following code to see the dataset:

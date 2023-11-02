@@ -17,21 +17,14 @@
 Pytorch Implementation is given in sign_language_pytorch.ipynb
 
 
-![Screenshot 2019-03-31 at 2 35 30 PM]
-
-
-
-<p>Read the entire process at:</p>
-<link>http://arshad-kazi.com/sign-language-recognition-using-cnn-and-opencv/</link>
-
 <h1>Sign Language Recognition Using CNN and OpenCV<h1>
 
 <p>To build a SLR (Sign Language Recognition) we will need three things:
 </p>
 
-<h3>Dataset</h3>
-<h3>Model (In this case we will use a CNN)</h3>
-<h3>Platform to apply our model (We are going to use OpenCV)
+<h3>1)Dataset</h3>
+<h3>2)Model (In this case we will use a CNN)</h3>
+<h3>3)Platform to apply our model (We are going to use OpenCV)
 </h3>
 
 

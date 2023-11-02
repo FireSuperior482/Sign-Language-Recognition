@@ -41,7 +41,7 @@ Loading the dataset to colab
 To load the dataset into colab use this code:
 
 
-#import keras
+# import keras
 from keras.datasets import mnist
 (X_train, Y_train) , (X_test , Y_test) = mnist.load_data()
 Our dataset is in CSV(Comma-separated values) format. train_X and test_X contain the values of each pixel. train_Y and test_Y contain the label of image. You can use the following code to see the dataset:
@@ -102,6 +102,8 @@ We have to compile and fit our model. To do that we will use this:
 
 classifier.compile(optimizer='SGD', loss='categorical_crossentropy', metrics=['accuracy'])
 classifier.fit(X_train, y_train, epochs=50, batch_size=100)
+
+
 We are using SGD optimiser to compile our model. You may decrease the epochs to 25.
 
 Finally to check the accuracy we will use this:
@@ -110,6 +112,8 @@ Finally to check the accuracy we will use this:
 
 accuracy = classifier.evaluate(x=X_test,y=y_test,batch_size=32)
 print("Accuracy: ",accuracy[1])
+
+
 Now to download the trained model on our PC we can use this:
 
 
@@ -118,6 +122,8 @@ classifier.save('CNNmodel.h5')
 weights_file = drive.CreateFile({'title' : 'CNNmodel.h5'})
 weights_file.SetContentFile('CNNmodel.h5')<br>weights_file.Upload()
 drive.CreateFile({'id': weights_file.get('id')})
+
+
 It will save the trained model to your drive.
 
 3) OpenCV
@@ -149,6 +155,8 @@ def main():
        # expand the dimensions from 28x28 to 1x28x28x1
        im4 = np.resize(im3, (28, 28, 1))
        im5 = np.expand_dims(im4, axis=0)
+
+
 Prediction
 Now we have to predict the alphabet from the input image. Our model will give outputs as integers rather than alphabets that’s because the labels are given as integers (1 for A, 2 for B, 3 for C and so on..)
 
